@@ -1,0 +1,1966 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		800387811B7746CB00A61A15 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800387801B7746CB00A61A15 /* CommonCrypto.framework */; };
+		800635511B74FE1F007E0AE7 /* SesionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635501B74FE1F007E0AE7 /* SesionStore.swift */; };
+		800635531B751E12007E0AE7 /* MemorySessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635521B751E12007E0AE7 /* MemorySessionStore.swift */; };
+		800635551B752058007E0AE7 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635541B752058007E0AE7 /* SessionError.swift */; };
+		800635571B7525D3007E0AE7 /* MemorySessionStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635561B7525D3007E0AE7 /* MemorySessionStoreTest.swift */; };
+		800635591B752604007E0AE7 /* SessionStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635581B752604007E0AE7 /* SessionStoreTest.swift */; };
+		801BEEE11B63B83F00CA5051 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE01B63B83F00CA5051 /* Request.swift */; };
+		801BEEE31B63B85600CA5051 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE21B63B85600CA5051 /* RequestFactory.swift */; };
+		801BEEE51B63B8AC00CA5051 /* StandardRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE41B63B8AC00CA5051 /* StandardRequestFactory.swift */; };
+		801BEEE91B63B92300CA5051 /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE81B63B92300CA5051 /* SessionRequest.swift */; };
+		801BEEEB1B63BB4200CA5051 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEA1B63BB4200CA5051 /* Platform.swift */; };
+		801BEEED1B63BE3F00CA5051 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEC1B63BE3F00CA5051 /* Status.swift */; };
+		801BEEEF1B63BFB700CA5051 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEE1B63BFB700CA5051 /* RequestError.swift */; };
+		801BEEF11B63C10D00CA5051 /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEF01B63C10D00CA5051 /* CacheTest.swift */; };
+		8022AF6A1B767D4B00AD2BCA /* RequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8022AF691B767D4B00AD2BCA /* RequestBase.swift */; };
+		8022AF6C1B767E8500AD2BCA /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8022AF6B1B767E8500AD2BCA /* Argument.swift */; };
+		802D856B1B88700A00420F64 /* ActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802D856A1B88700A00420F64 /* ActorTest.swift */; };
+		803081C01B6566E00014A9B2 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081BF1B6566E00014A9B2 /* MemoryCache.swift */; };
+		803081C21B65681B0014A9B2 /* NoopCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081C11B65681B0014A9B2 /* NoopCacheTest.swift */; };
+		803081C41B6568330014A9B2 /* MemoryCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081C31B6568330014A9B2 /* MemoryCacheTest.swift */; };
+		803659C01B786B44003866FA /* Alamofire.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80F25E5D1B77BD50007D05D3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		803659C21B786B44003866FA /* CommonCrypto.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 800387801B7746CB00A61A15 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		804593001B80960F00718207 /* JFCommon.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 8082B18A1B80949E00DEE193 /* JFCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		804593021B80966700718207 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804593011B80966700718207 /* Crypto.framework */; };
+		804593031B80966A00718207 /* Crypto.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 804593011B80966700718207 /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		804B8D6B1B80A8A600D7EC93 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6A1B80A8A600D7EC93 /* Password.swift */; };
+		804B8D6D1B80AAE900D7EC93 /* BitwiseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6C1B80AAE900D7EC93 /* BitwiseString.swift */; };
+		804B8D6F1B80AF4D00D7EC93 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6E1B80AF4D00D7EC93 /* Base64.swift */; };
+		804B8D711B80B2A800D7EC93 /* PasswordTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D701B80B2A800D7EC93 /* PasswordTest.swift */; };
+		804B8D731B80B91700D7EC93 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D721B80B91700D7EC93 /* Session.swift */; };
+		804B8D781B80BD4E00D7EC93 /* SessionInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D771B80BD4E00D7EC93 /* SessionInitialize.swift */; };
+		804B8D7A1B80C11200D7EC93 /* SessionCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D791B80C11200D7EC93 /* SessionCreate.swift */; };
+		804B8D7C1B80D1A900D7EC93 /* SessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D7B1B80D1A900D7EC93 /* SessionTest.swift */; };
+		804B8D821B81040900D7EC93 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D811B81040900D7EC93 /* Actor.swift */; };
+		804B8D841B8104F400D7EC93 /* SessionCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D831B8104F400D7EC93 /* SessionCache.swift */; };
+		804B8D861B81088700D7EC93 /* SessionCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D851B81088700D7EC93 /* SessionCacheTest.swift */; };
+		804B8D8C1B8113A100D7EC93 /* BasicCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8B1B8113A100D7EC93 /* BasicCustomer.swift */; };
+		804B8D8E1B81142000D7EC93 /* BasicAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8D1B81142000D7EC93 /* BasicAccount.swift */; };
+		804B8D901B81145600D7EC93 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8F1B81145600D7EC93 /* Role.swift */; };
+		804B8D921B81152400D7EC93 /* RoleInActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D911B81152400D7EC93 /* RoleInActor.swift */; };
+		804C1B541B77633A00336007 /* UrlEncodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C1B531B77633A00336007 /* UrlEncodingTest.swift */; };
+		804C1B561B7769D400336007 /* RequestBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C1B551B7769D400336007 /* RequestBaseTest.swift */; };
+		80520C8A1BA4418F00975520 /* StreamOneSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520C801BA4418F00975520 /* StreamOneSDK.framework */; };
+		80520CB51BA4423900975520 /* SessionInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D771B80BD4E00D7EC93 /* SessionInitialize.swift */; };
+		80520CB61BA4423900975520 /* SessionCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D791B80C11200D7EC93 /* SessionCreate.swift */; };
+		80520CB71BA4423900975520 /* BasicCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8B1B8113A100D7EC93 /* BasicCustomer.swift */; };
+		80520CB81BA4423900975520 /* BasicAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8D1B81142000D7EC93 /* BasicAccount.swift */; };
+		80520CB91BA4423900975520 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8F1B81145600D7EC93 /* Role.swift */; };
+		80520CBA1BA4423900975520 /* RoleInActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D911B81152400D7EC93 /* RoleInActor.swift */; };
+		80520CBB1BA4423900975520 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F4129A1B768FF3002EB218 /* Regex.swift */; };
+		80520CBC1BA4423900975520 /* UrlEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80929C3E1B769AFF00FD9AB5 /* UrlEncoding.swift */; };
+		80520CBE1BA4423900975520 /* BitwiseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6C1B80AAE900D7EC93 /* BitwiseString.swift */; };
+		80520CBF1BA4423900975520 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6E1B80AF4D00D7EC93 /* Base64.swift */; };
+		80520CC01BA4423900975520 /* ActorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F5CAD11B825AC70057C132 /* ActorType.swift */; };
+		80520CC11BA4423900975520 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80924B7D1B5A5F42003BADFA /* Config.swift */; };
+		80520CC21BA4423900975520 /* AuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80924B7F1B5A5F94003BADFA /* AuthenticationType.swift */; };
+		80520CC31BA4423900975520 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F578FE1B5B8B2000C29603 /* Cache.swift */; };
+		80520CC41BA4423900975520 /* NoopCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F579001B5B8C8E00C29603 /* NoopCache.swift */; };
+		80520CC51BA4423900975520 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081BF1B6566E00014A9B2 /* MemoryCache.swift */; };
+		80520CC61BA4423900975520 /* SessionCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D831B8104F400D7EC93 /* SessionCache.swift */; };
+		80520CC71BA4423900975520 /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A520FA1B66AA8D00F7124D /* FileCache.swift */; };
+		80520CC81BA4423900975520 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8022AF6B1B767E8500AD2BCA /* Argument.swift */; };
+		80520CC91BA4423900975520 /* RequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8022AF691B767D4B00AD2BCA /* RequestBase.swift */; };
+		80520CCA1BA4423900975520 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE01B63B83F00CA5051 /* Request.swift */; };
+		80520CCB1BA4423900975520 /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE81B63B92300CA5051 /* SessionRequest.swift */; };
+		80520CCC1BA4423900975520 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E5F1B77BF2E007D05D3 /* Response.swift */; };
+		80520CCD1BA4423900975520 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE21B63B85600CA5051 /* RequestFactory.swift */; };
+		80520CCE1BA4423900975520 /* StandardRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE41B63B8AC00CA5051 /* StandardRequestFactory.swift */; };
+		80520CCF1BA4423900975520 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEA1B63BB4200CA5051 /* Platform.swift */; };
+		80520CD01BA4423900975520 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEC1B63BE3F00CA5051 /* Status.swift */; };
+		80520CD11BA4423900975520 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEE1B63BFB700CA5051 /* RequestError.swift */; };
+		80520CD21BA4423900975520 /* SesionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635501B74FE1F007E0AE7 /* SesionStore.swift */; };
+		80520CD31BA4423900975520 /* MemorySessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635521B751E12007E0AE7 /* MemorySessionStore.swift */; };
+		80520CD41BA4423900975520 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D721B80B91700D7EC93 /* Session.swift */; };
+		80520CD51BA4423900975520 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635541B752058007E0AE7 /* SessionError.swift */; };
+		80520CD61BA4423900975520 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6A1B80A8A600D7EC93 /* Password.swift */; };
+		80520CD71BA4423900975520 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D811B81040900D7EC93 /* Actor.swift */; };
+		80520CD81BA4423900975520 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B035AC1B9AFCA600643AF6 /* Constants.swift */; };
+		80520CD91BA4423A00975520 /* SessionInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D771B80BD4E00D7EC93 /* SessionInitialize.swift */; };
+		80520CDA1BA4423A00975520 /* SessionCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D791B80C11200D7EC93 /* SessionCreate.swift */; };
+		80520CDB1BA4423A00975520 /* BasicCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8B1B8113A100D7EC93 /* BasicCustomer.swift */; };
+		80520CDC1BA4423A00975520 /* BasicAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8D1B81142000D7EC93 /* BasicAccount.swift */; };
+		80520CDD1BA4423A00975520 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8F1B81145600D7EC93 /* Role.swift */; };
+		80520CDE1BA4423A00975520 /* RoleInActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D911B81152400D7EC93 /* RoleInActor.swift */; };
+		80520CDF1BA4423A00975520 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F4129A1B768FF3002EB218 /* Regex.swift */; };
+		80520CE01BA4423A00975520 /* UrlEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80929C3E1B769AFF00FD9AB5 /* UrlEncoding.swift */; };
+		80520CE21BA4423A00975520 /* BitwiseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6C1B80AAE900D7EC93 /* BitwiseString.swift */; };
+		80520CE31BA4423A00975520 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6E1B80AF4D00D7EC93 /* Base64.swift */; };
+		80520CE41BA4423A00975520 /* ActorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F5CAD11B825AC70057C132 /* ActorType.swift */; };
+		80520CE51BA4423A00975520 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80924B7D1B5A5F42003BADFA /* Config.swift */; };
+		80520CE61BA4423A00975520 /* AuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80924B7F1B5A5F94003BADFA /* AuthenticationType.swift */; };
+		80520CE71BA4423A00975520 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F578FE1B5B8B2000C29603 /* Cache.swift */; };
+		80520CE81BA4423A00975520 /* NoopCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F579001B5B8C8E00C29603 /* NoopCache.swift */; };
+		80520CE91BA4423A00975520 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081BF1B6566E00014A9B2 /* MemoryCache.swift */; };
+		80520CEA1BA4423A00975520 /* SessionCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D831B8104F400D7EC93 /* SessionCache.swift */; };
+		80520CEB1BA4423A00975520 /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A520FA1B66AA8D00F7124D /* FileCache.swift */; };
+		80520CEC1BA4423A00975520 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8022AF6B1B767E8500AD2BCA /* Argument.swift */; };
+		80520CED1BA4423A00975520 /* RequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8022AF691B767D4B00AD2BCA /* RequestBase.swift */; };
+		80520CEE1BA4423A00975520 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE01B63B83F00CA5051 /* Request.swift */; };
+		80520CEF1BA4423A00975520 /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE81B63B92300CA5051 /* SessionRequest.swift */; };
+		80520CF01BA4423A00975520 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E5F1B77BF2E007D05D3 /* Response.swift */; };
+		80520CF11BA4423A00975520 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE21B63B85600CA5051 /* RequestFactory.swift */; };
+		80520CF21BA4423A00975520 /* StandardRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE41B63B8AC00CA5051 /* StandardRequestFactory.swift */; };
+		80520CF31BA4423A00975520 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEA1B63BB4200CA5051 /* Platform.swift */; };
+		80520CF41BA4423A00975520 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEC1B63BE3F00CA5051 /* Status.swift */; };
+		80520CF51BA4423A00975520 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEE1B63BFB700CA5051 /* RequestError.swift */; };
+		80520CF61BA4423A00975520 /* SesionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635501B74FE1F007E0AE7 /* SesionStore.swift */; };
+		80520CF71BA4423A00975520 /* MemorySessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635521B751E12007E0AE7 /* MemorySessionStore.swift */; };
+		80520CF81BA4423A00975520 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D721B80B91700D7EC93 /* Session.swift */; };
+		80520CF91BA4423A00975520 /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635541B752058007E0AE7 /* SessionError.swift */; };
+		80520CFA1BA4423A00975520 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6A1B80A8A600D7EC93 /* Password.swift */; };
+		80520CFB1BA4423A00975520 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D811B81040900D7EC93 /* Actor.swift */; };
+		80520CFC1BA4423A00975520 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B035AC1B9AFCA600643AF6 /* Constants.swift */; };
+		80520CFD1BA4423E00975520 /* StreamOneSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 80924B661B5A5B7D003BADFA /* StreamOneSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80520CFE1BA4424100975520 /* StreamOneSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 80924B661B5A5B7D003BADFA /* StreamOneSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80520CFF1BA4425400975520 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAD1BA441BD00975520 /* Alamofire.framework */; };
+		80520D001BA4425400975520 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAE1BA441BD00975520 /* Argo.framework */; };
+		80520D011BA4425400975520 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAF1BA441BD00975520 /* CommonCrypto.framework */; };
+		80520D021BA4425400975520 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CB01BA441BD00975520 /* Crypto.framework */; };
+		80520D031BA4425400975520 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CB11BA441BD00975520 /* Curry.framework */; };
+		80520D041BA4425400975520 /* JFCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CB21BA441BD00975520 /* JFCommon.framework */; };
+		80520D051BA4426600975520 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CA71BA441B500975520 /* Alamofire.framework */; };
+		80520D061BA4426600975520 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CA81BA441B500975520 /* Argo.framework */; };
+		80520D071BA4426600975520 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CA91BA441B500975520 /* CommonCrypto.framework */; };
+		80520D081BA4426600975520 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAA1BA441B500975520 /* Crypto.framework */; };
+		80520D091BA4426600975520 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAB1BA441B500975520 /* Curry.framework */; };
+		80520D0A1BA4426600975520 /* JFCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAC1BA441B500975520 /* JFCommon.framework */; };
+		80520D0B1BA442C400975520 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAD1BA441BD00975520 /* Alamofire.framework */; };
+		80520D0C1BA442C400975520 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAE1BA441BD00975520 /* Argo.framework */; };
+		80520D0D1BA442C400975520 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CB11BA441BD00975520 /* Curry.framework */; };
+		80520D111BA442DA00975520 /* Alamofire.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAD1BA441BD00975520 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80520D121BA442DA00975520 /* Argo.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAE1BA441BD00975520 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80520D131BA442DA00975520 /* CommonCrypto.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CAF1BA441BD00975520 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80520D141BA442DA00975520 /* Crypto.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CB01BA441BD00975520 /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80520D151BA442DA00975520 /* Curry.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CB11BA441BD00975520 /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80520D161BA442DA00975520 /* JFCommon.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80520CB21BA441BD00975520 /* JFCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		806AC6A91B5C3DC0006451F3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806AC6A81B5C3DC0006451F3 /* Helpers.swift */; };
+		807FA4A21C144605006CE8D3 /* SessionInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D771B80BD4E00D7EC93 /* SessionInitialize.swift */; };
+		807FA4A31C144605006CE8D3 /* SessionCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D791B80C11200D7EC93 /* SessionCreate.swift */; };
+		807FA4A41C144605006CE8D3 /* BasicCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8B1B8113A100D7EC93 /* BasicCustomer.swift */; };
+		807FA4A51C144605006CE8D3 /* BasicAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8D1B81142000D7EC93 /* BasicAccount.swift */; };
+		807FA4A61C144605006CE8D3 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D8F1B81145600D7EC93 /* Role.swift */; };
+		807FA4A71C144605006CE8D3 /* RoleInActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D911B81152400D7EC93 /* RoleInActor.swift */; };
+		8082B18B1B80949E00DEE193 /* JFCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8082B18A1B80949E00DEE193 /* JFCommon.framework */; };
+		80924B671B5A5B7D003BADFA /* StreamOneSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 80924B661B5A5B7D003BADFA /* StreamOneSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80924B6E1B5A5B7D003BADFA /* StreamOneSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80924B631B5A5B7D003BADFA /* StreamOneSDK.framework */; };
+		80924B7E1B5A5F42003BADFA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80924B7D1B5A5F42003BADFA /* Config.swift */; };
+		80924B801B5A5F94003BADFA /* AuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80924B7F1B5A5F94003BADFA /* AuthenticationType.swift */; };
+		80929C3F1B769AFF00FD9AB5 /* UrlEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80929C3E1B769AFF00FD9AB5 /* UrlEncoding.swift */; };
+		80986BC91BA4434B0001157E /* ConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A9E741B5C2BCB0062FF59 /* ConfigTest.swift */; };
+		80986BCA1BA4434B0001157E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806AC6A81B5C3DC0006451F3 /* Helpers.swift */; };
+		80986BCB1BA4434B0001157E /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEF01B63C10D00CA5051 /* CacheTest.swift */; };
+		80986BCC1BA4434B0001157E /* NoopCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081C11B65681B0014A9B2 /* NoopCacheTest.swift */; };
+		80986BCD1BA4434B0001157E /* MemoryCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081C31B6568330014A9B2 /* MemoryCacheTest.swift */; };
+		80986BCE1BA4434B0001157E /* SessionCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D851B81088700D7EC93 /* SessionCacheTest.swift */; };
+		80986BCF1BA4434B0001157E /* FileCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE10EB1B66B030005553E2 /* FileCacheTest.swift */; };
+		80986BD01BA4434B0001157E /* MemorySessionStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635561B7525D3007E0AE7 /* MemorySessionStoreTest.swift */; };
+		80986BD11BA4434B0001157E /* SessionStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635581B752604007E0AE7 /* SessionStoreTest.swift */; };
+		80986BD21BA4434B0001157E /* RegexTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E591B77B7A8007D05D3 /* RegexTest.swift */; };
+		80986BD31BA4434B0001157E /* UrlEncodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C1B531B77633A00336007 /* UrlEncodingTest.swift */; };
+		80986BD51BA4434B0001157E /* RequestBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C1B551B7769D400336007 /* RequestBaseTest.swift */; };
+		80986BD61BA4434B0001157E /* RequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E571B77B1A8007D05D3 /* RequestTest.swift */; };
+		80986BD71BA4434B0001157E /* ResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A84C1B78FA9000ACD17C /* ResponseTest.swift */; };
+		80986BD81BA4434B0001157E /* PasswordTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D701B80B2A800D7EC93 /* PasswordTest.swift */; };
+		80986BD91BA4434B0001157E /* SessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D7B1B80D1A900D7EC93 /* SessionTest.swift */; };
+		80986BDA1BA4434B0001157E /* ActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802D856A1B88700A00420F64 /* ActorTest.swift */; };
+		809A9E751B5C2BCB0062FF59 /* ConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A9E741B5C2BCB0062FF59 /* ConfigTest.swift */; };
+		80A520FB1B66AA8D00F7124D /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A520FA1B66AA8D00F7124D /* FileCache.swift */; };
+		80ADB1151C12F4B700F0924A /* StreamOneSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB10B1C12F4B700F0924A /* StreamOneSDK.framework */; };
+		80ADB1291C12F66700F0924A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1231C12F5A300F0924A /* Alamofire.framework */; };
+		80ADB12A1C12F66700F0924A /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1241C12F5A300F0924A /* Argo.framework */; };
+		80ADB12B1C12F66700F0924A /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1251C12F5A300F0924A /* CommonCrypto.framework */; };
+		80ADB12C1C12F66700F0924A /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1261C12F5A300F0924A /* Crypto.framework */; };
+		80ADB12D1C12F66700F0924A /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1271C12F5A300F0924A /* Curry.framework */; };
+		80ADB12E1C12F66700F0924A /* JFCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1281C12F5A300F0924A /* JFCommon.framework */; };
+		80ADB12F1C12F67400F0924A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80924B7D1B5A5F42003BADFA /* Config.swift */; };
+		80ADB1301C12F67400F0924A /* AuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80924B7F1B5A5F94003BADFA /* AuthenticationType.swift */; };
+		80ADB1311C12F67400F0924A /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F578FE1B5B8B2000C29603 /* Cache.swift */; };
+		80ADB1321C12F67400F0924A /* NoopCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F579001B5B8C8E00C29603 /* NoopCache.swift */; };
+		80ADB1331C12F67400F0924A /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081BF1B6566E00014A9B2 /* MemoryCache.swift */; };
+		80ADB1341C12F67400F0924A /* SessionCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D831B8104F400D7EC93 /* SessionCache.swift */; };
+		80ADB1351C12F67400F0924A /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A520FA1B66AA8D00F7124D /* FileCache.swift */; };
+		80ADB1361C12F67400F0924A /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8022AF6B1B767E8500AD2BCA /* Argument.swift */; };
+		80ADB1371C12F67400F0924A /* RequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8022AF691B767D4B00AD2BCA /* RequestBase.swift */; };
+		80ADB1381C12F67400F0924A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE01B63B83F00CA5051 /* Request.swift */; };
+		80ADB1391C12F67400F0924A /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE81B63B92300CA5051 /* SessionRequest.swift */; };
+		80ADB13A1C12F67400F0924A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E5F1B77BF2E007D05D3 /* Response.swift */; };
+		80ADB13B1C12F67400F0924A /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE21B63B85600CA5051 /* RequestFactory.swift */; };
+		80ADB13C1C12F67400F0924A /* StandardRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEE41B63B8AC00CA5051 /* StandardRequestFactory.swift */; };
+		80ADB13D1C12F67400F0924A /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEA1B63BB4200CA5051 /* Platform.swift */; };
+		80ADB13E1C12F67400F0924A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEC1B63BE3F00CA5051 /* Status.swift */; };
+		80ADB13F1C12F67400F0924A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEEE1B63BFB700CA5051 /* RequestError.swift */; };
+		80ADB1401C12F67400F0924A /* SesionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635501B74FE1F007E0AE7 /* SesionStore.swift */; };
+		80ADB1411C12F67400F0924A /* MemorySessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635521B751E12007E0AE7 /* MemorySessionStore.swift */; };
+		80ADB1421C12F67400F0924A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D721B80B91700D7EC93 /* Session.swift */; };
+		80ADB1431C12F67400F0924A /* SessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635541B752058007E0AE7 /* SessionError.swift */; };
+		80ADB1441C12F67400F0924A /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6A1B80A8A600D7EC93 /* Password.swift */; };
+		80ADB1451C12F67400F0924A /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D811B81040900D7EC93 /* Actor.swift */; };
+		80ADB1461C12F67400F0924A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B035AC1B9AFCA600643AF6 /* Constants.swift */; };
+		80ADB1471C12F67800F0924A /* StreamOneSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 80924B661B5A5B7D003BADFA /* StreamOneSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80ADB1481C12F67F00F0924A /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F4129A1B768FF3002EB218 /* Regex.swift */; };
+		80ADB1491C12F67F00F0924A /* UrlEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80929C3E1B769AFF00FD9AB5 /* UrlEncoding.swift */; };
+		80ADB14B1C12F67F00F0924A /* BitwiseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6C1B80AAE900D7EC93 /* BitwiseString.swift */; };
+		80ADB14C1C12F67F00F0924A /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D6E1B80AF4D00D7EC93 /* Base64.swift */; };
+		80ADB14D1C12F67F00F0924A /* ActorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F5CAD11B825AC70057C132 /* ActorType.swift */; };
+		80B035AD1B9AFCA600643AF6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B035AC1B9AFCA600643AF6 /* Constants.swift */; };
+		80C0A84D1B78FA9000ACD17C /* ResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A84C1B78FA9000ACD17C /* ResponseTest.swift */; };
+		80C9F8B71B7BB5F600210F59 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C9F8B61B7BB5F600210F59 /* Argo.framework */; };
+		80C9F8B81B7BB5F600210F59 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C9F8B61B7BB5F600210F59 /* Argo.framework */; };
+		80C9F8B91B7BB60100210F59 /* Argo.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80C9F8B61B7BB5F600210F59 /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80C9F8BB1B7BB75800210F59 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C9F8BA1B7BB75800210F59 /* Curry.framework */; };
+		80C9F8BC1B7BB75800210F59 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C9F8BA1B7BB75800210F59 /* Curry.framework */; };
+		80C9F8BD1B7BB76000210F59 /* Curry.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80C9F8BA1B7BB75800210F59 /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E759681C256FF9004C41EE /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E759571C256FE9004C41EE /* Quick.framework */; };
+		80E759691C256FFF004C41EE /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E759431C256FE5004C41EE /* Nimble.framework */; };
+		80E7596A1C257179004C41EE /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E7593F1C256FE5004C41EE /* Nimble.framework */; };
+		80E7596C1C257188004C41EE /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E7595D1C256FE9004C41EE /* Quick.framework */; };
+		80E7596D1C25718E004C41EE /* Quick.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80E7595D1C256FE9004C41EE /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E7596E1C25719E004C41EE /* Nimble.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80E7593F1C256FE5004C41EE /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E7596F1C2571EA004C41EE /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E759471C256FE5004C41EE /* Nimble.framework */; };
+		80E759701C2571EA004C41EE /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E759631C256FE9004C41EE /* Quick.framework */; };
+		80E759711C2571FA004C41EE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1231C12F5A300F0924A /* Alamofire.framework */; };
+		80E759721C2571FA004C41EE /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1241C12F5A300F0924A /* Argo.framework */; };
+		80E759731C2571FA004C41EE /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1271C12F5A300F0924A /* Curry.framework */; };
+		80E759751C25720E004C41EE /* Alamofire.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1231C12F5A300F0924A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E759761C25720E004C41EE /* Argo.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1241C12F5A300F0924A /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E759771C25720E004C41EE /* CommonCrypto.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1251C12F5A300F0924A /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E759781C25720E004C41EE /* Crypto.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1261C12F5A300F0924A /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E759791C25720E004C41EE /* Curry.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1271C12F5A300F0924A /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E7597A1C25720E004C41EE /* JFCommon.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADB1281C12F5A300F0924A /* JFCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80E7597D1C2572D6004C41EE /* ConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A9E741B5C2BCB0062FF59 /* ConfigTest.swift */; };
+		80E7597E1C2572D6004C41EE /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806AC6A81B5C3DC0006451F3 /* Helpers.swift */; };
+		80E7597F1C2572D6004C41EE /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BEEF01B63C10D00CA5051 /* CacheTest.swift */; };
+		80E759801C2572D6004C41EE /* NoopCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081C11B65681B0014A9B2 /* NoopCacheTest.swift */; };
+		80E759811C2572D6004C41EE /* MemoryCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803081C31B6568330014A9B2 /* MemoryCacheTest.swift */; };
+		80E759821C2572D6004C41EE /* SessionCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D851B81088700D7EC93 /* SessionCacheTest.swift */; };
+		80E759831C2572D6004C41EE /* FileCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE10EB1B66B030005553E2 /* FileCacheTest.swift */; };
+		80E759841C2572D6004C41EE /* MemorySessionStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635561B7525D3007E0AE7 /* MemorySessionStoreTest.swift */; };
+		80E759851C2572D6004C41EE /* SessionStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800635581B752604007E0AE7 /* SessionStoreTest.swift */; };
+		80E759861C2572D6004C41EE /* RegexTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E591B77B7A8007D05D3 /* RegexTest.swift */; };
+		80E759871C2572D6004C41EE /* UrlEncodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C1B531B77633A00336007 /* UrlEncodingTest.swift */; };
+		80E759881C2572D6004C41EE /* RequestBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804C1B551B7769D400336007 /* RequestBaseTest.swift */; };
+		80E759891C2572D6004C41EE /* RequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E571B77B1A8007D05D3 /* RequestTest.swift */; };
+		80E7598A1C2572D6004C41EE /* ResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C0A84C1B78FA9000ACD17C /* ResponseTest.swift */; };
+		80E7598B1C2572D6004C41EE /* PasswordTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D701B80B2A800D7EC93 /* PasswordTest.swift */; };
+		80E7598C1C2572D6004C41EE /* SessionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8D7B1B80D1A900D7EC93 /* SessionTest.swift */; };
+		80E7598D1C2572D6004C41EE /* ActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802D856A1B88700A00420F64 /* ActorTest.swift */; };
+		80EE10EC1B66B030005553E2 /* FileCacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE10EB1B66B030005553E2 /* FileCacheTest.swift */; };
+		80F25E581B77B1A8007D05D3 /* RequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E571B77B1A8007D05D3 /* RequestTest.swift */; };
+		80F25E5A1B77B7A8007D05D3 /* RegexTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E591B77B7A8007D05D3 /* RegexTest.swift */; };
+		80F25E5E1B77BD50007D05D3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F25E5D1B77BD50007D05D3 /* Alamofire.framework */; };
+		80F25E601B77BF2E007D05D3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F25E5F1B77BF2E007D05D3 /* Response.swift */; };
+		80F4129B1B768FF3002EB218 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F4129A1B768FF3002EB218 /* Regex.swift */; };
+		80F578FF1B5B8B2000C29603 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F578FE1B5B8B2000C29603 /* Cache.swift */; };
+		80F579011B5B8C8E00C29603 /* NoopCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F579001B5B8C8E00C29603 /* NoopCache.swift */; };
+		80F5C0501B77CAB600F0ECEA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F25E5D1B77BD50007D05D3 /* Alamofire.framework */; };
+		80F5CAD21B825AC70057C132 /* ActorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F5CAD11B825AC70057C132 /* ActorType.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80520C8B1BA4418F00975520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80924B5A1B5A5B7D003BADFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80520C7F1BA4418F00975520;
+			remoteInfo = "StreamOneSDK-OSX";
+		};
+		80924B6F1B5A5B7D003BADFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80924B5A1B5A5B7D003BADFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80924B621B5A5B7D003BADFA;
+			remoteInfo = StreamOneSDK;
+		};
+		80ADB1161C12F4B700F0924A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80924B5A1B5A5B7D003BADFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80ADB10A1C12F4B700F0924A;
+			remoteInfo = "StreamOneSDK-tvOS";
+		};
+		80E7593E1C256FE5004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E759351C256FE5004C41EE /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74291940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
+		80E759401C256FE5004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E759351C256FE5004C41EE /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74341940169200FFFC47;
+			remoteInfo = "Nimble-iOSTests";
+		};
+		80E759421C256FE5004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E759351C256FE5004C41EE /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EAD195C0D6300ED456B;
+			remoteInfo = "Nimble-OSX";
+		};
+		80E759441C256FE5004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E759351C256FE5004C41EE /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
+			remoteInfo = "Nimble-OSXTests";
+		};
+		80E759461C256FE5004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E759351C256FE5004C41EE /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F5DF1551BDCA0CE00C3A531;
+			remoteInfo = "Nimble-tvOS";
+		};
+		80E759481C256FE5004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E759351C256FE5004C41EE /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F5DF15E1BDCA0CE00C3A531;
+			remoteInfo = "Nimble-tvOSTests";
+		};
+		80E759561C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAEB6B8E1943873100289F44;
+			remoteInfo = "Quick-OSX";
+		};
+		80E759581C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAEB6B991943873100289F44;
+			remoteInfo = "Quick-OSXTests";
+		};
+		80E7595A1C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA5663E81A4C8D8500193C88;
+			remoteInfo = "QuickFocused-OSXTests";
+		};
+		80E7595C1C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5D117C19473F2100F6D13D;
+			remoteInfo = "Quick-iOS";
+		};
+		80E7595E1C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A5D118619473F2100F6D13D;
+			remoteInfo = "Quick-iOSTests";
+		};
+		80E759601C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA9876B21A4C70EB0004AA17;
+			remoteInfo = "QuickFocused-iOSTests";
+		};
+		80E759621C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F118CD51BDCA4AB005013A2;
+			remoteInfo = "Quick-tvOS";
+		};
+		80E759641C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F118CDE1BDCA4AB005013A2;
+			remoteInfo = "Quick-tvOSTests";
+		};
+		80E759661C256FE9004C41EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F118CF01BDCA4BB005013A2;
+			remoteInfo = "QuickFocused-tvOSTests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		803659BF1B786B27003866FA /* Copy Carthage Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				803659C01B786B44003866FA /* Alamofire.framework in Copy Carthage Frameworks */,
+				803659C21B786B44003866FA /* CommonCrypto.framework in Copy Carthage Frameworks */,
+				80C9F8B91B7BB60100210F59 /* Argo.framework in Copy Carthage Frameworks */,
+				80E7596D1C25718E004C41EE /* Quick.framework in Copy Carthage Frameworks */,
+				80E7596E1C25719E004C41EE /* Nimble.framework in Copy Carthage Frameworks */,
+				80C9F8BD1B7BB76000210F59 /* Curry.framework in Copy Carthage Frameworks */,
+				804593001B80960F00718207 /* JFCommon.framework in Copy Carthage Frameworks */,
+				804593031B80966A00718207 /* Crypto.framework in Copy Carthage Frameworks */,
+			);
+			name = "Copy Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80520D101BA442C700975520 /* Copy Carthage Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				80520D111BA442DA00975520 /* Alamofire.framework in Copy Carthage Frameworks */,
+				80520D121BA442DA00975520 /* Argo.framework in Copy Carthage Frameworks */,
+				80520D131BA442DA00975520 /* CommonCrypto.framework in Copy Carthage Frameworks */,
+				80520D141BA442DA00975520 /* Crypto.framework in Copy Carthage Frameworks */,
+				80520D151BA442DA00975520 /* Curry.framework in Copy Carthage Frameworks */,
+				80520D161BA442DA00975520 /* JFCommon.framework in Copy Carthage Frameworks */,
+			);
+			name = "Copy Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80E759741C257206004C41EE /* Copy Carthage Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				80E759751C25720E004C41EE /* Alamofire.framework in Copy Carthage Frameworks */,
+				80E759761C25720E004C41EE /* Argo.framework in Copy Carthage Frameworks */,
+				80E759771C25720E004C41EE /* CommonCrypto.framework in Copy Carthage Frameworks */,
+				80E759781C25720E004C41EE /* Crypto.framework in Copy Carthage Frameworks */,
+				80E759791C25720E004C41EE /* Curry.framework in Copy Carthage Frameworks */,
+				80E7597A1C25720E004C41EE /* JFCommon.framework in Copy Carthage Frameworks */,
+			);
+			name = "Copy Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		800387801B7746CB00A61A15 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		800635501B74FE1F007E0AE7 /* SesionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SesionStore.swift; sourceTree = "<group>"; };
+		800635521B751E12007E0AE7 /* MemorySessionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorySessionStore.swift; sourceTree = "<group>"; };
+		800635541B752058007E0AE7 /* SessionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionError.swift; sourceTree = "<group>"; };
+		800635561B7525D3007E0AE7 /* MemorySessionStoreTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemorySessionStoreTest.swift; sourceTree = "<group>"; };
+		800635581B752604007E0AE7 /* SessionStoreTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStoreTest.swift; sourceTree = "<group>"; };
+		801BEEE01B63B83F00CA5051 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		801BEEE21B63B85600CA5051 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		801BEEE41B63B8AC00CA5051 /* StandardRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardRequestFactory.swift; sourceTree = "<group>"; };
+		801BEEE81B63B92300CA5051 /* SessionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRequest.swift; sourceTree = "<group>"; };
+		801BEEEA1B63BB4200CA5051 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		801BEEEC1B63BE3F00CA5051 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		801BEEEE1B63BFB700CA5051 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		801BEEF01B63C10D00CA5051 /* CacheTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTest.swift; sourceTree = "<group>"; };
+		8022AF691B767D4B00AD2BCA /* RequestBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBase.swift; sourceTree = "<group>"; };
+		8022AF6B1B767E8500AD2BCA /* Argument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
+		802D856A1B88700A00420F64 /* ActorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTest.swift; sourceTree = "<group>"; };
+		803081BF1B6566E00014A9B2 /* MemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		803081C11B65681B0014A9B2 /* NoopCacheTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoopCacheTest.swift; sourceTree = "<group>"; };
+		803081C31B6568330014A9B2 /* MemoryCacheTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheTest.swift; sourceTree = "<group>"; };
+		804593011B80966700718207 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
+		804B8D6A1B80A8A600D7EC93 /* Password.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		804B8D6C1B80AAE900D7EC93 /* BitwiseString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitwiseString.swift; sourceTree = "<group>"; };
+		804B8D6E1B80AF4D00D7EC93 /* Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
+		804B8D701B80B2A800D7EC93 /* PasswordTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTest.swift; sourceTree = "<group>"; };
+		804B8D721B80B91700D7EC93 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		804B8D771B80BD4E00D7EC93 /* SessionInitialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInitialize.swift; sourceTree = "<group>"; };
+		804B8D791B80C11200D7EC93 /* SessionCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCreate.swift; sourceTree = "<group>"; };
+		804B8D7B1B80D1A900D7EC93 /* SessionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTest.swift; sourceTree = "<group>"; };
+		804B8D811B81040900D7EC93 /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		804B8D831B8104F400D7EC93 /* SessionCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCache.swift; sourceTree = "<group>"; };
+		804B8D851B81088700D7EC93 /* SessionCacheTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCacheTest.swift; sourceTree = "<group>"; };
+		804B8D8B1B8113A100D7EC93 /* BasicCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCustomer.swift; sourceTree = "<group>"; };
+		804B8D8D1B81142000D7EC93 /* BasicAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAccount.swift; sourceTree = "<group>"; };
+		804B8D8F1B81145600D7EC93 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		804B8D911B81152400D7EC93 /* RoleInActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleInActor.swift; sourceTree = "<group>"; };
+		804C1B531B77633A00336007 /* UrlEncodingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlEncodingTest.swift; sourceTree = "<group>"; };
+		804C1B551B7769D400336007 /* RequestBaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBaseTest.swift; sourceTree = "<group>"; };
+		80520C801BA4418F00975520 /* StreamOneSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StreamOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80520C891BA4418F00975520 /* StreamOneSDK-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StreamOneSDK-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80520C9C1BA4419800975520 /* StreamOneSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StreamOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80520CA71BA441B500975520 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
+		80520CA81BA441B500975520 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/watchOS/Argo.framework; sourceTree = "<group>"; };
+		80520CA91BA441B500975520 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/watchOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		80520CAA1BA441B500975520 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/watchOS/Crypto.framework; sourceTree = "<group>"; };
+		80520CAB1BA441B500975520 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/watchOS/Curry.framework; sourceTree = "<group>"; };
+		80520CAC1BA441B500975520 /* JFCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JFCommon.framework; path = Carthage/Build/watchOS/JFCommon.framework; sourceTree = "<group>"; };
+		80520CAD1BA441BD00975520 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		80520CAE1BA441BD00975520 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/Mac/Argo.framework; sourceTree = "<group>"; };
+		80520CAF1BA441BD00975520 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/Mac/CommonCrypto.framework; sourceTree = "<group>"; };
+		80520CB01BA441BD00975520 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/Mac/Crypto.framework; sourceTree = "<group>"; };
+		80520CB11BA441BD00975520 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/Mac/Curry.framework; sourceTree = "<group>"; };
+		80520CB21BA441BD00975520 /* JFCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JFCommon.framework; path = Carthage/Build/Mac/JFCommon.framework; sourceTree = "<group>"; };
+		806AC6A81B5C3DC0006451F3 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8082B18A1B80949E00DEE193 /* JFCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JFCommon.framework; path = Carthage/Build/iOS/JFCommon.framework; sourceTree = "<group>"; };
+		80924B631B5A5B7D003BADFA /* StreamOneSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StreamOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80924B661B5A5B7D003BADFA /* StreamOneSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreamOneSDK.h; sourceTree = "<group>"; };
+		80924B681B5A5B7D003BADFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80924B6D1B5A5B7D003BADFA /* StreamOneSDK-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StreamOneSDK-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80924B741B5A5B7D003BADFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80924B7D1B5A5F42003BADFA /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		80924B7F1B5A5F94003BADFA /* AuthenticationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationType.swift; sourceTree = "<group>"; };
+		80929C3E1B769AFF00FD9AB5 /* UrlEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlEncoding.swift; sourceTree = "<group>"; };
+		809A9E741B5C2BCB0062FF59 /* ConfigTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigTest.swift; sourceTree = "<group>"; };
+		80A520FA1B66AA8D00F7124D /* FileCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
+		80ADB10B1C12F4B700F0924A /* StreamOneSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StreamOneSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80ADB1141C12F4B700F0924A /* StreamOneSDK-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StreamOneSDK-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80ADB1231C12F5A300F0924A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		80ADB1241C12F5A300F0924A /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/tvOS/Argo.framework; sourceTree = "<group>"; };
+		80ADB1251C12F5A300F0924A /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/tvOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		80ADB1261C12F5A300F0924A /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/tvOS/Crypto.framework; sourceTree = "<group>"; };
+		80ADB1271C12F5A300F0924A /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/tvOS/Curry.framework; sourceTree = "<group>"; };
+		80ADB1281C12F5A300F0924A /* JFCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JFCommon.framework; path = Carthage/Build/tvOS/JFCommon.framework; sourceTree = "<group>"; };
+		80B035AC1B9AFCA600643AF6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		80C0A84C1B78FA9000ACD17C /* ResponseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseTest.swift; sourceTree = "<group>"; };
+		80C9F8B61B7BB5F600210F59 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		80C9F8BA1B7BB75800210F59 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		80E759351C256FE5004C41EE /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = TestingDependencies/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
+		80E7594A1C256FE9004C41EE /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = TestingDependencies/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
+		80EE10EB1B66B030005553E2 /* FileCacheTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileCacheTest.swift; sourceTree = "<group>"; };
+		80F25E571B77B1A8007D05D3 /* RequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTest.swift; sourceTree = "<group>"; };
+		80F25E591B77B7A8007D05D3 /* RegexTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexTest.swift; sourceTree = "<group>"; };
+		80F25E5D1B77BD50007D05D3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		80F25E5F1B77BF2E007D05D3 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		80F4129A1B768FF3002EB218 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		80F578FE1B5B8B2000C29603 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		80F579001B5B8C8E00C29603 /* NoopCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoopCache.swift; sourceTree = "<group>"; };
+		80F5CAD11B825AC70057C132 /* ActorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80520C7C1BA4418F00975520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80520CFF1BA4425400975520 /* Alamofire.framework in Frameworks */,
+				80520D001BA4425400975520 /* Argo.framework in Frameworks */,
+				80520D011BA4425400975520 /* CommonCrypto.framework in Frameworks */,
+				80520D021BA4425400975520 /* Crypto.framework in Frameworks */,
+				80520D031BA4425400975520 /* Curry.framework in Frameworks */,
+				80520D041BA4425400975520 /* JFCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80520C861BA4418F00975520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80E759691C256FFF004C41EE /* Nimble.framework in Frameworks */,
+				80E759681C256FF9004C41EE /* Quick.framework in Frameworks */,
+				80520C8A1BA4418F00975520 /* StreamOneSDK.framework in Frameworks */,
+				80520D0B1BA442C400975520 /* Alamofire.framework in Frameworks */,
+				80520D0C1BA442C400975520 /* Argo.framework in Frameworks */,
+				80520D0D1BA442C400975520 /* Curry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80520C981BA4419800975520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80520D051BA4426600975520 /* Alamofire.framework in Frameworks */,
+				80520D061BA4426600975520 /* Argo.framework in Frameworks */,
+				80520D071BA4426600975520 /* CommonCrypto.framework in Frameworks */,
+				80520D081BA4426600975520 /* Crypto.framework in Frameworks */,
+				80520D091BA4426600975520 /* Curry.framework in Frameworks */,
+				80520D0A1BA4426600975520 /* JFCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80924B5F1B5A5B7D003BADFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80C9F8BB1B7BB75800210F59 /* Curry.framework in Frameworks */,
+				800387811B7746CB00A61A15 /* CommonCrypto.framework in Frameworks */,
+				80F25E5E1B77BD50007D05D3 /* Alamofire.framework in Frameworks */,
+				804593021B80966700718207 /* Crypto.framework in Frameworks */,
+				8082B18B1B80949E00DEE193 /* JFCommon.framework in Frameworks */,
+				80C9F8B71B7BB5F600210F59 /* Argo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80924B6A1B5A5B7D003BADFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80C9F8BC1B7BB75800210F59 /* Curry.framework in Frameworks */,
+				80C9F8B81B7BB5F600210F59 /* Argo.framework in Frameworks */,
+				80924B6E1B5A5B7D003BADFA /* StreamOneSDK.framework in Frameworks */,
+				80F5C0501B77CAB600F0ECEA /* Alamofire.framework in Frameworks */,
+				80E7596A1C257179004C41EE /* Nimble.framework in Frameworks */,
+				80E7596C1C257188004C41EE /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80ADB1071C12F4B700F0924A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80ADB1291C12F66700F0924A /* Alamofire.framework in Frameworks */,
+				80ADB12A1C12F66700F0924A /* Argo.framework in Frameworks */,
+				80ADB12B1C12F66700F0924A /* CommonCrypto.framework in Frameworks */,
+				80ADB12C1C12F66700F0924A /* Crypto.framework in Frameworks */,
+				80ADB12D1C12F66700F0924A /* Curry.framework in Frameworks */,
+				80ADB12E1C12F66700F0924A /* JFCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80ADB1111C12F4B700F0924A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80E7596F1C2571EA004C41EE /* Nimble.framework in Frameworks */,
+				80E759701C2571EA004C41EE /* Quick.framework in Frameworks */,
+				80ADB1151C12F4B700F0924A /* StreamOneSDK.framework in Frameworks */,
+				80E759711C2571FA004C41EE /* Alamofire.framework in Frameworks */,
+				80E759721C2571FA004C41EE /* Argo.framework in Frameworks */,
+				80E759731C2571FA004C41EE /* Curry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C6C293EC0A9A84EFC6E26C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80ADB1221C12F54900F0924A /* tvOS */,
+				80520CA61BA441A700975520 /* watchOS */,
+				80520CA51BA441A300975520 /* OSX */,
+				80520CA41BA4419E00975520 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		804B8D741B80BD0000D7EC93 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				804B8D771B80BD4E00D7EC93 /* SessionInitialize.swift */,
+				804B8D791B80C11200D7EC93 /* SessionCreate.swift */,
+				804B8D8B1B8113A100D7EC93 /* BasicCustomer.swift */,
+				804B8D8D1B81142000D7EC93 /* BasicAccount.swift */,
+				804B8D8F1B81145600D7EC93 /* Role.swift */,
+				804B8D911B81152400D7EC93 /* RoleInActor.swift */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
+		80520CA41BA4419E00975520 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				804593011B80966700718207 /* Crypto.framework */,
+				8082B18A1B80949E00DEE193 /* JFCommon.framework */,
+				80C9F8BA1B7BB75800210F59 /* Curry.framework */,
+				80C9F8B61B7BB5F600210F59 /* Argo.framework */,
+				80F25E5D1B77BD50007D05D3 /* Alamofire.framework */,
+				800387801B7746CB00A61A15 /* CommonCrypto.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		80520CA51BA441A300975520 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				80520CAD1BA441BD00975520 /* Alamofire.framework */,
+				80520CAE1BA441BD00975520 /* Argo.framework */,
+				80520CAF1BA441BD00975520 /* CommonCrypto.framework */,
+				80520CB01BA441BD00975520 /* Crypto.framework */,
+				80520CB11BA441BD00975520 /* Curry.framework */,
+				80520CB21BA441BD00975520 /* JFCommon.framework */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		80520CA61BA441A700975520 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				80520CA71BA441B500975520 /* Alamofire.framework */,
+				80520CA81BA441B500975520 /* Argo.framework */,
+				80520CA91BA441B500975520 /* CommonCrypto.framework */,
+				80520CAA1BA441B500975520 /* Crypto.framework */,
+				80520CAB1BA441B500975520 /* Curry.framework */,
+				80520CAC1BA441B500975520 /* JFCommon.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		80924B591B5A5B7D003BADFA = {
+			isa = PBXGroup;
+			children = (
+				80924B651B5A5B7D003BADFA /* StreamOneSDK */,
+				80924B711B5A5B7D003BADFA /* StreamOneSDKTests */,
+				80924B641B5A5B7D003BADFA /* Products */,
+				2C6C293EC0A9A84EFC6E26C4 /* Frameworks */,
+				80E759341C256FCA004C41EE /* Testing Dependencies */,
+			);
+			sourceTree = "<group>";
+		};
+		80924B641B5A5B7D003BADFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80924B631B5A5B7D003BADFA /* StreamOneSDK.framework */,
+				80924B6D1B5A5B7D003BADFA /* StreamOneSDK-iOSTests.xctest */,
+				80520C801BA4418F00975520 /* StreamOneSDK.framework */,
+				80520C891BA4418F00975520 /* StreamOneSDK-OSXTests.xctest */,
+				80520C9C1BA4419800975520 /* StreamOneSDK.framework */,
+				80ADB10B1C12F4B700F0924A /* StreamOneSDK.framework */,
+				80ADB1141C12F4B700F0924A /* StreamOneSDK-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80924B651B5A5B7D003BADFA /* StreamOneSDK */ = {
+			isa = PBXGroup;
+			children = (
+				804B8D741B80BD0000D7EC93 /* Object */,
+				80F412991B768FEA002EB218 /* Helpers */,
+				80924B661B5A5B7D003BADFA /* StreamOneSDK.h */,
+				80924B681B5A5B7D003BADFA /* Info.plist */,
+				80924B7D1B5A5F42003BADFA /* Config.swift */,
+				80924B7F1B5A5F94003BADFA /* AuthenticationType.swift */,
+				80F578FE1B5B8B2000C29603 /* Cache.swift */,
+				80F579001B5B8C8E00C29603 /* NoopCache.swift */,
+				803081BF1B6566E00014A9B2 /* MemoryCache.swift */,
+				804B8D831B8104F400D7EC93 /* SessionCache.swift */,
+				80A520FA1B66AA8D00F7124D /* FileCache.swift */,
+				8022AF6B1B767E8500AD2BCA /* Argument.swift */,
+				8022AF691B767D4B00AD2BCA /* RequestBase.swift */,
+				801BEEE01B63B83F00CA5051 /* Request.swift */,
+				801BEEE81B63B92300CA5051 /* SessionRequest.swift */,
+				80F25E5F1B77BF2E007D05D3 /* Response.swift */,
+				801BEEE21B63B85600CA5051 /* RequestFactory.swift */,
+				801BEEE41B63B8AC00CA5051 /* StandardRequestFactory.swift */,
+				801BEEEA1B63BB4200CA5051 /* Platform.swift */,
+				801BEEEC1B63BE3F00CA5051 /* Status.swift */,
+				801BEEEE1B63BFB700CA5051 /* RequestError.swift */,
+				800635501B74FE1F007E0AE7 /* SesionStore.swift */,
+				800635521B751E12007E0AE7 /* MemorySessionStore.swift */,
+				804B8D721B80B91700D7EC93 /* Session.swift */,
+				800635541B752058007E0AE7 /* SessionError.swift */,
+				804B8D6A1B80A8A600D7EC93 /* Password.swift */,
+				804B8D811B81040900D7EC93 /* Actor.swift */,
+				80B035AC1B9AFCA600643AF6 /* Constants.swift */,
+			);
+			path = StreamOneSDK;
+			sourceTree = "<group>";
+		};
+		80924B711B5A5B7D003BADFA /* StreamOneSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				80924B741B5A5B7D003BADFA /* Info.plist */,
+				809A9E741B5C2BCB0062FF59 /* ConfigTest.swift */,
+				806AC6A81B5C3DC0006451F3 /* Helpers.swift */,
+				801BEEF01B63C10D00CA5051 /* CacheTest.swift */,
+				803081C11B65681B0014A9B2 /* NoopCacheTest.swift */,
+				803081C31B6568330014A9B2 /* MemoryCacheTest.swift */,
+				804B8D851B81088700D7EC93 /* SessionCacheTest.swift */,
+				80EE10EB1B66B030005553E2 /* FileCacheTest.swift */,
+				800635561B7525D3007E0AE7 /* MemorySessionStoreTest.swift */,
+				800635581B752604007E0AE7 /* SessionStoreTest.swift */,
+				80F25E591B77B7A8007D05D3 /* RegexTest.swift */,
+				804C1B531B77633A00336007 /* UrlEncodingTest.swift */,
+				804C1B551B7769D400336007 /* RequestBaseTest.swift */,
+				80F25E571B77B1A8007D05D3 /* RequestTest.swift */,
+				80C0A84C1B78FA9000ACD17C /* ResponseTest.swift */,
+				804B8D701B80B2A800D7EC93 /* PasswordTest.swift */,
+				804B8D7B1B80D1A900D7EC93 /* SessionTest.swift */,
+				802D856A1B88700A00420F64 /* ActorTest.swift */,
+			);
+			path = StreamOneSDKTests;
+			sourceTree = "<group>";
+		};
+		80ADB1221C12F54900F0924A /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				80ADB1231C12F5A300F0924A /* Alamofire.framework */,
+				80ADB1241C12F5A300F0924A /* Argo.framework */,
+				80ADB1251C12F5A300F0924A /* CommonCrypto.framework */,
+				80ADB1261C12F5A300F0924A /* Crypto.framework */,
+				80ADB1271C12F5A300F0924A /* Curry.framework */,
+				80ADB1281C12F5A300F0924A /* JFCommon.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		80E759341C256FCA004C41EE /* Testing Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				80E759351C256FE5004C41EE /* Nimble.xcodeproj */,
+				80E7594A1C256FE9004C41EE /* Quick.xcodeproj */,
+			);
+			name = "Testing Dependencies";
+			sourceTree = "<group>";
+		};
+		80E759361C256FE5004C41EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80E7593F1C256FE5004C41EE /* Nimble.framework */,
+				80E759411C256FE5004C41EE /* NimbleTests.xctest */,
+				80E759431C256FE5004C41EE /* Nimble.framework */,
+				80E759451C256FE5004C41EE /* NimbleTests.xctest */,
+				80E759471C256FE5004C41EE /* Nimble.framework */,
+				80E759491C256FE5004C41EE /* NimbleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80E7594B1C256FE9004C41EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80E759571C256FE9004C41EE /* Quick.framework */,
+				80E759591C256FE9004C41EE /* Quick-OSXTests.xctest */,
+				80E7595B1C256FE9004C41EE /* QuickFocused-OSXTests.xctest */,
+				80E7595D1C256FE9004C41EE /* Quick.framework */,
+				80E7595F1C256FE9004C41EE /* Quick-iOSTests.xctest */,
+				80E759611C256FE9004C41EE /* QuickFocused-iOSTests.xctest */,
+				80E759631C256FE9004C41EE /* Quick.framework */,
+				80E759651C256FE9004C41EE /* Quick-tvOSTests.xctest */,
+				80E759671C256FE9004C41EE /* QuickFocused-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80F412991B768FEA002EB218 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				80F4129A1B768FF3002EB218 /* Regex.swift */,
+				80929C3E1B769AFF00FD9AB5 /* UrlEncoding.swift */,
+				804B8D6C1B80AAE900D7EC93 /* BitwiseString.swift */,
+				804B8D6E1B80AF4D00D7EC93 /* Base64.swift */,
+				80F5CAD11B825AC70057C132 /* ActorType.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		80520C7D1BA4418F00975520 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80520CFD1BA4423E00975520 /* StreamOneSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80520C991BA4419800975520 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80520CFE1BA4424100975520 /* StreamOneSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80924B601B5A5B7D003BADFA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80924B671B5A5B7D003BADFA /* StreamOneSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80ADB1081C12F4B700F0924A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80ADB1471C12F67800F0924A /* StreamOneSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		80520C7F1BA4418F00975520 /* StreamOneSDK-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80520C951BA4418F00975520 /* Build configuration list for PBXNativeTarget "StreamOneSDK-OSX" */;
+			buildPhases = (
+				80520C7B1BA4418F00975520 /* Sources */,
+				80520C7C1BA4418F00975520 /* Frameworks */,
+				80520C7D1BA4418F00975520 /* Headers */,
+				80520C7E1BA4418F00975520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StreamOneSDK-OSX";
+			productName = "StreamOneSDK-OSX";
+			productReference = 80520C801BA4418F00975520 /* StreamOneSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		80520C881BA4418F00975520 /* StreamOneSDK-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80520C961BA4418F00975520 /* Build configuration list for PBXNativeTarget "StreamOneSDK-OSXTests" */;
+			buildPhases = (
+				80520C851BA4418F00975520 /* Sources */,
+				80520C861BA4418F00975520 /* Frameworks */,
+				80520C871BA4418F00975520 /* Resources */,
+				80520D101BA442C700975520 /* Copy Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80520C8C1BA4418F00975520 /* PBXTargetDependency */,
+			);
+			name = "StreamOneSDK-OSXTests";
+			productName = "StreamOneSDK-OSXTests";
+			productReference = 80520C891BA4418F00975520 /* StreamOneSDK-OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		80520C9B1BA4419800975520 /* StreamOneSDK-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80520CA11BA4419800975520 /* Build configuration list for PBXNativeTarget "StreamOneSDK-watchOS" */;
+			buildPhases = (
+				80520C971BA4419800975520 /* Sources */,
+				80520C981BA4419800975520 /* Frameworks */,
+				80520C991BA4419800975520 /* Headers */,
+				80520C9A1BA4419800975520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StreamOneSDK-watchOS";
+			productName = "StreamOneSDK-watchOS";
+			productReference = 80520C9C1BA4419800975520 /* StreamOneSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		80924B621B5A5B7D003BADFA /* StreamOneSDK-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80924B771B5A5B7D003BADFA /* Build configuration list for PBXNativeTarget "StreamOneSDK-iOS" */;
+			buildPhases = (
+				80924B5E1B5A5B7D003BADFA /* Sources */,
+				80924B5F1B5A5B7D003BADFA /* Frameworks */,
+				80924B601B5A5B7D003BADFA /* Headers */,
+				80924B611B5A5B7D003BADFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StreamOneSDK-iOS";
+			productName = StreamOneSDK;
+			productReference = 80924B631B5A5B7D003BADFA /* StreamOneSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		80924B6C1B5A5B7D003BADFA /* StreamOneSDK-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80924B7A1B5A5B7D003BADFA /* Build configuration list for PBXNativeTarget "StreamOneSDK-iOSTests" */;
+			buildPhases = (
+				80924B691B5A5B7D003BADFA /* Sources */,
+				80924B6A1B5A5B7D003BADFA /* Frameworks */,
+				80924B6B1B5A5B7D003BADFA /* Resources */,
+				803659BF1B786B27003866FA /* Copy Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80924B701B5A5B7D003BADFA /* PBXTargetDependency */,
+			);
+			name = "StreamOneSDK-iOSTests";
+			productName = StreamOneSDKTests;
+			productReference = 80924B6D1B5A5B7D003BADFA /* StreamOneSDK-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		80ADB10A1C12F4B700F0924A /* StreamOneSDK-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80ADB1201C12F4B700F0924A /* Build configuration list for PBXNativeTarget "StreamOneSDK-tvOS" */;
+			buildPhases = (
+				80ADB1061C12F4B700F0924A /* Sources */,
+				80ADB1071C12F4B700F0924A /* Frameworks */,
+				80ADB1081C12F4B700F0924A /* Headers */,
+				80ADB1091C12F4B700F0924A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StreamOneSDK-tvOS";
+			productName = "StreamOneSDK-tvOS";
+			productReference = 80ADB10B1C12F4B700F0924A /* StreamOneSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		80ADB1131C12F4B700F0924A /* StreamOneSDK-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80ADB1211C12F4B700F0924A /* Build configuration list for PBXNativeTarget "StreamOneSDK-tvOSTests" */;
+			buildPhases = (
+				80ADB1101C12F4B700F0924A /* Sources */,
+				80ADB1111C12F4B700F0924A /* Frameworks */,
+				80ADB1121C12F4B700F0924A /* Resources */,
+				80E759741C257206004C41EE /* Copy Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80ADB1171C12F4B700F0924A /* PBXTargetDependency */,
+			);
+			name = "StreamOneSDK-tvOSTests";
+			productName = "StreamOneSDK-tvOSTests";
+			productReference = 80ADB1141C12F4B700F0924A /* StreamOneSDK-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80924B5A1B5A5B7D003BADFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = StreamOne;
+				TargetAttributes = {
+					80520C7F1BA4418F00975520 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					80520C881BA4418F00975520 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					80520C9B1BA4419800975520 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					80924B621B5A5B7D003BADFA = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					80924B6C1B5A5B7D003BADFA = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					80ADB10A1C12F4B700F0924A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					80ADB1131C12F4B700F0924A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 80924B5D1B5A5B7D003BADFA /* Build configuration list for PBXProject "StreamOneSDK" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 80924B591B5A5B7D003BADFA;
+			productRefGroup = 80924B641B5A5B7D003BADFA /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 80E759361C256FE5004C41EE /* Products */;
+					ProjectRef = 80E759351C256FE5004C41EE /* Nimble.xcodeproj */;
+				},
+				{
+					ProductGroup = 80E7594B1C256FE9004C41EE /* Products */;
+					ProjectRef = 80E7594A1C256FE9004C41EE /* Quick.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				80924B621B5A5B7D003BADFA /* StreamOneSDK-iOS */,
+				80924B6C1B5A5B7D003BADFA /* StreamOneSDK-iOSTests */,
+				80520C7F1BA4418F00975520 /* StreamOneSDK-OSX */,
+				80520C881BA4418F00975520 /* StreamOneSDK-OSXTests */,
+				80520C9B1BA4419800975520 /* StreamOneSDK-watchOS */,
+				80ADB10A1C12F4B700F0924A /* StreamOneSDK-tvOS */,
+				80ADB1131C12F4B700F0924A /* StreamOneSDK-tvOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		80E7593F1C256FE5004C41EE /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 80E7593E1C256FE5004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759411C256FE5004C41EE /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 80E759401C256FE5004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759431C256FE5004C41EE /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 80E759421C256FE5004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759451C256FE5004C41EE /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 80E759441C256FE5004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759471C256FE5004C41EE /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 80E759461C256FE5004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759491C256FE5004C41EE /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 80E759481C256FE5004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759571C256FE9004C41EE /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 80E759561C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759591C256FE9004C41EE /* Quick-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Quick-OSXTests.xctest";
+			remoteRef = 80E759581C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E7595B1C256FE9004C41EE /* QuickFocused-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QuickFocused-OSXTests.xctest";
+			remoteRef = 80E7595A1C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E7595D1C256FE9004C41EE /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 80E7595C1C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E7595F1C256FE9004C41EE /* Quick-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Quick-iOSTests.xctest";
+			remoteRef = 80E7595E1C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759611C256FE9004C41EE /* QuickFocused-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QuickFocused-iOSTests.xctest";
+			remoteRef = 80E759601C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759631C256FE9004C41EE /* Quick.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Quick.framework;
+			remoteRef = 80E759621C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759651C256FE9004C41EE /* Quick-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Quick-tvOSTests.xctest";
+			remoteRef = 80E759641C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		80E759671C256FE9004C41EE /* QuickFocused-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QuickFocused-tvOSTests.xctest";
+			remoteRef = 80E759661C256FE9004C41EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80520C7E1BA4418F00975520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80520C871BA4418F00975520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80520C9A1BA4419800975520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80924B611B5A5B7D003BADFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80924B6B1B5A5B7D003BADFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80ADB1091C12F4B700F0924A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80ADB1121C12F4B700F0924A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80520C7B1BA4418F00975520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80520CB81BA4423900975520 /* BasicAccount.swift in Sources */,
+				80520CC31BA4423900975520 /* Cache.swift in Sources */,
+				80520CD51BA4423900975520 /* SessionError.swift in Sources */,
+				80520CC21BA4423900975520 /* AuthenticationType.swift in Sources */,
+				80520CC01BA4423900975520 /* ActorType.swift in Sources */,
+				80520CC51BA4423900975520 /* MemoryCache.swift in Sources */,
+				80520CCE1BA4423900975520 /* StandardRequestFactory.swift in Sources */,
+				80520CB71BA4423900975520 /* BasicCustomer.swift in Sources */,
+				80520CC91BA4423900975520 /* RequestBase.swift in Sources */,
+				80520CD21BA4423900975520 /* SesionStore.swift in Sources */,
+				80520CBF1BA4423900975520 /* Base64.swift in Sources */,
+				80520CCF1BA4423900975520 /* Platform.swift in Sources */,
+				80520CB61BA4423900975520 /* SessionCreate.swift in Sources */,
+				80520CD41BA4423900975520 /* Session.swift in Sources */,
+				80520CC81BA4423900975520 /* Argument.swift in Sources */,
+				80520CCB1BA4423900975520 /* SessionRequest.swift in Sources */,
+				80520CC71BA4423900975520 /* FileCache.swift in Sources */,
+				80520CBB1BA4423900975520 /* Regex.swift in Sources */,
+				80520CD11BA4423900975520 /* RequestError.swift in Sources */,
+				80520CD31BA4423900975520 /* MemorySessionStore.swift in Sources */,
+				80520CC61BA4423900975520 /* SessionCache.swift in Sources */,
+				80520CC11BA4423900975520 /* Config.swift in Sources */,
+				80520CB51BA4423900975520 /* SessionInitialize.swift in Sources */,
+				80520CCD1BA4423900975520 /* RequestFactory.swift in Sources */,
+				80520CD71BA4423900975520 /* Actor.swift in Sources */,
+				80520CCC1BA4423900975520 /* Response.swift in Sources */,
+				80520CCA1BA4423900975520 /* Request.swift in Sources */,
+				80520CD61BA4423900975520 /* Password.swift in Sources */,
+				80520CC41BA4423900975520 /* NoopCache.swift in Sources */,
+				80520CBA1BA4423900975520 /* RoleInActor.swift in Sources */,
+				80520CD01BA4423900975520 /* Status.swift in Sources */,
+				80520CBE1BA4423900975520 /* BitwiseString.swift in Sources */,
+				80520CBC1BA4423900975520 /* UrlEncoding.swift in Sources */,
+				80520CB91BA4423900975520 /* Role.swift in Sources */,
+				80520CD81BA4423900975520 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80520C851BA4418F00975520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80986BD81BA4434B0001157E /* PasswordTest.swift in Sources */,
+				80986BD11BA4434B0001157E /* SessionStoreTest.swift in Sources */,
+				80986BC91BA4434B0001157E /* ConfigTest.swift in Sources */,
+				80986BD01BA4434B0001157E /* MemorySessionStoreTest.swift in Sources */,
+				80986BCB1BA4434B0001157E /* CacheTest.swift in Sources */,
+				80986BCC1BA4434B0001157E /* NoopCacheTest.swift in Sources */,
+				80986BD61BA4434B0001157E /* RequestTest.swift in Sources */,
+				80986BDA1BA4434B0001157E /* ActorTest.swift in Sources */,
+				80986BD71BA4434B0001157E /* ResponseTest.swift in Sources */,
+				80986BD21BA4434B0001157E /* RegexTest.swift in Sources */,
+				80986BCE1BA4434B0001157E /* SessionCacheTest.swift in Sources */,
+				80986BCD1BA4434B0001157E /* MemoryCacheTest.swift in Sources */,
+				80986BD51BA4434B0001157E /* RequestBaseTest.swift in Sources */,
+				80986BCA1BA4434B0001157E /* Helpers.swift in Sources */,
+				80986BCF1BA4434B0001157E /* FileCacheTest.swift in Sources */,
+				80986BD91BA4434B0001157E /* SessionTest.swift in Sources */,
+				80986BD31BA4434B0001157E /* UrlEncodingTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80520C971BA4419800975520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80520CDC1BA4423A00975520 /* BasicAccount.swift in Sources */,
+				80520CE71BA4423A00975520 /* Cache.swift in Sources */,
+				80520CF91BA4423A00975520 /* SessionError.swift in Sources */,
+				80520CE61BA4423A00975520 /* AuthenticationType.swift in Sources */,
+				80520CE41BA4423A00975520 /* ActorType.swift in Sources */,
+				80520CE91BA4423A00975520 /* MemoryCache.swift in Sources */,
+				80520CF21BA4423A00975520 /* StandardRequestFactory.swift in Sources */,
+				80520CDB1BA4423A00975520 /* BasicCustomer.swift in Sources */,
+				80520CED1BA4423A00975520 /* RequestBase.swift in Sources */,
+				80520CF61BA4423A00975520 /* SesionStore.swift in Sources */,
+				80520CE31BA4423A00975520 /* Base64.swift in Sources */,
+				80520CF31BA4423A00975520 /* Platform.swift in Sources */,
+				80520CDA1BA4423A00975520 /* SessionCreate.swift in Sources */,
+				80520CF81BA4423A00975520 /* Session.swift in Sources */,
+				80520CEC1BA4423A00975520 /* Argument.swift in Sources */,
+				80520CEF1BA4423A00975520 /* SessionRequest.swift in Sources */,
+				80520CEB1BA4423A00975520 /* FileCache.swift in Sources */,
+				80520CDF1BA4423A00975520 /* Regex.swift in Sources */,
+				80520CF51BA4423A00975520 /* RequestError.swift in Sources */,
+				80520CF71BA4423A00975520 /* MemorySessionStore.swift in Sources */,
+				80520CEA1BA4423A00975520 /* SessionCache.swift in Sources */,
+				80520CE51BA4423A00975520 /* Config.swift in Sources */,
+				80520CD91BA4423A00975520 /* SessionInitialize.swift in Sources */,
+				80520CF11BA4423A00975520 /* RequestFactory.swift in Sources */,
+				80520CFB1BA4423A00975520 /* Actor.swift in Sources */,
+				80520CF01BA4423A00975520 /* Response.swift in Sources */,
+				80520CEE1BA4423A00975520 /* Request.swift in Sources */,
+				80520CFA1BA4423A00975520 /* Password.swift in Sources */,
+				80520CE81BA4423A00975520 /* NoopCache.swift in Sources */,
+				80520CDE1BA4423A00975520 /* RoleInActor.swift in Sources */,
+				80520CF41BA4423A00975520 /* Status.swift in Sources */,
+				80520CE21BA4423A00975520 /* BitwiseString.swift in Sources */,
+				80520CE01BA4423A00975520 /* UrlEncoding.swift in Sources */,
+				80520CDD1BA4423A00975520 /* Role.swift in Sources */,
+				80520CFC1BA4423A00975520 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80924B5E1B5A5B7D003BADFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804B8D781B80BD4E00D7EC93 /* SessionInitialize.swift in Sources */,
+				801BEEEB1B63BB4200CA5051 /* Platform.swift in Sources */,
+				801BEEED1B63BE3F00CA5051 /* Status.swift in Sources */,
+				801BEEE51B63B8AC00CA5051 /* StandardRequestFactory.swift in Sources */,
+				80A520FB1B66AA8D00F7124D /* FileCache.swift in Sources */,
+				804B8D7A1B80C11200D7EC93 /* SessionCreate.swift in Sources */,
+				804B8D6D1B80AAE900D7EC93 /* BitwiseString.swift in Sources */,
+				801BEEEF1B63BFB700CA5051 /* RequestError.swift in Sources */,
+				8022AF6A1B767D4B00AD2BCA /* RequestBase.swift in Sources */,
+				80929C3F1B769AFF00FD9AB5 /* UrlEncoding.swift in Sources */,
+				804B8D921B81152400D7EC93 /* RoleInActor.swift in Sources */,
+				800635531B751E12007E0AE7 /* MemorySessionStore.swift in Sources */,
+				801BEEE31B63B85600CA5051 /* RequestFactory.swift in Sources */,
+				804B8D821B81040900D7EC93 /* Actor.swift in Sources */,
+				800635511B74FE1F007E0AE7 /* SesionStore.swift in Sources */,
+				80924B7E1B5A5F42003BADFA /* Config.swift in Sources */,
+				804B8D841B8104F400D7EC93 /* SessionCache.swift in Sources */,
+				80F578FF1B5B8B2000C29603 /* Cache.swift in Sources */,
+				804B8D901B81145600D7EC93 /* Role.swift in Sources */,
+				801BEEE91B63B92300CA5051 /* SessionRequest.swift in Sources */,
+				801BEEE11B63B83F00CA5051 /* Request.swift in Sources */,
+				80F4129B1B768FF3002EB218 /* Regex.swift in Sources */,
+				803081C01B6566E00014A9B2 /* MemoryCache.swift in Sources */,
+				80F5CAD21B825AC70057C132 /* ActorType.swift in Sources */,
+				804B8D8E1B81142000D7EC93 /* BasicAccount.swift in Sources */,
+				804B8D6F1B80AF4D00D7EC93 /* Base64.swift in Sources */,
+				800635551B752058007E0AE7 /* SessionError.swift in Sources */,
+				804B8D731B80B91700D7EC93 /* Session.swift in Sources */,
+				80F25E601B77BF2E007D05D3 /* Response.swift in Sources */,
+				804B8D8C1B8113A100D7EC93 /* BasicCustomer.swift in Sources */,
+				80F579011B5B8C8E00C29603 /* NoopCache.swift in Sources */,
+				8022AF6C1B767E8500AD2BCA /* Argument.swift in Sources */,
+				804B8D6B1B80A8A600D7EC93 /* Password.swift in Sources */,
+				80B035AD1B9AFCA600643AF6 /* Constants.swift in Sources */,
+				80924B801B5A5F94003BADFA /* AuthenticationType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80924B691B5A5B7D003BADFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804B8D7C1B80D1A900D7EC93 /* SessionTest.swift in Sources */,
+				809A9E751B5C2BCB0062FF59 /* ConfigTest.swift in Sources */,
+				801BEEF11B63C10D00CA5051 /* CacheTest.swift in Sources */,
+				80C0A84D1B78FA9000ACD17C /* ResponseTest.swift in Sources */,
+				80EE10EC1B66B030005553E2 /* FileCacheTest.swift in Sources */,
+				803081C21B65681B0014A9B2 /* NoopCacheTest.swift in Sources */,
+				803081C41B6568330014A9B2 /* MemoryCacheTest.swift in Sources */,
+				802D856B1B88700A00420F64 /* ActorTest.swift in Sources */,
+				800635591B752604007E0AE7 /* SessionStoreTest.swift in Sources */,
+				800635571B7525D3007E0AE7 /* MemorySessionStoreTest.swift in Sources */,
+				804C1B561B7769D400336007 /* RequestBaseTest.swift in Sources */,
+				804B8D711B80B2A800D7EC93 /* PasswordTest.swift in Sources */,
+				80F25E581B77B1A8007D05D3 /* RequestTest.swift in Sources */,
+				804C1B541B77633A00336007 /* UrlEncodingTest.swift in Sources */,
+				804B8D861B81088700D7EC93 /* SessionCacheTest.swift in Sources */,
+				80F25E5A1B77B7A8007D05D3 /* RegexTest.swift in Sources */,
+				806AC6A91B5C3DC0006451F3 /* Helpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80ADB1061C12F4B700F0924A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80ADB14B1C12F67F00F0924A /* BitwiseString.swift in Sources */,
+				80ADB14D1C12F67F00F0924A /* ActorType.swift in Sources */,
+				80ADB1421C12F67400F0924A /* Session.swift in Sources */,
+				80ADB13D1C12F67400F0924A /* Platform.swift in Sources */,
+				80ADB12F1C12F67400F0924A /* Config.swift in Sources */,
+				80ADB1331C12F67400F0924A /* MemoryCache.swift in Sources */,
+				807FA4A31C144605006CE8D3 /* SessionCreate.swift in Sources */,
+				80ADB1351C12F67400F0924A /* FileCache.swift in Sources */,
+				80ADB13B1C12F67400F0924A /* RequestFactory.swift in Sources */,
+				80ADB1311C12F67400F0924A /* Cache.swift in Sources */,
+				80ADB13A1C12F67400F0924A /* Response.swift in Sources */,
+				80ADB1431C12F67400F0924A /* SessionError.swift in Sources */,
+				80ADB1451C12F67400F0924A /* Actor.swift in Sources */,
+				80ADB1491C12F67F00F0924A /* UrlEncoding.swift in Sources */,
+				80ADB1361C12F67400F0924A /* Argument.swift in Sources */,
+				80ADB1401C12F67400F0924A /* SesionStore.swift in Sources */,
+				80ADB1341C12F67400F0924A /* SessionCache.swift in Sources */,
+				80ADB1411C12F67400F0924A /* MemorySessionStore.swift in Sources */,
+				807FA4A41C144605006CE8D3 /* BasicCustomer.swift in Sources */,
+				80ADB1371C12F67400F0924A /* RequestBase.swift in Sources */,
+				80ADB1381C12F67400F0924A /* Request.swift in Sources */,
+				807FA4A71C144605006CE8D3 /* RoleInActor.swift in Sources */,
+				80ADB13E1C12F67400F0924A /* Status.swift in Sources */,
+				80ADB14C1C12F67F00F0924A /* Base64.swift in Sources */,
+				807FA4A51C144605006CE8D3 /* BasicAccount.swift in Sources */,
+				80ADB1441C12F67400F0924A /* Password.swift in Sources */,
+				80ADB1321C12F67400F0924A /* NoopCache.swift in Sources */,
+				80ADB13C1C12F67400F0924A /* StandardRequestFactory.swift in Sources */,
+				80ADB1391C12F67400F0924A /* SessionRequest.swift in Sources */,
+				807FA4A61C144605006CE8D3 /* Role.swift in Sources */,
+				80ADB1481C12F67F00F0924A /* Regex.swift in Sources */,
+				80ADB13F1C12F67400F0924A /* RequestError.swift in Sources */,
+				80ADB1301C12F67400F0924A /* AuthenticationType.swift in Sources */,
+				80ADB1461C12F67400F0924A /* Constants.swift in Sources */,
+				807FA4A21C144605006CE8D3 /* SessionInitialize.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80ADB1101C12F4B700F0924A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80E7598C1C2572D6004C41EE /* SessionTest.swift in Sources */,
+				80E759851C2572D6004C41EE /* SessionStoreTest.swift in Sources */,
+				80E7597D1C2572D6004C41EE /* ConfigTest.swift in Sources */,
+				80E7598A1C2572D6004C41EE /* ResponseTest.swift in Sources */,
+				80E759841C2572D6004C41EE /* MemorySessionStoreTest.swift in Sources */,
+				80E759891C2572D6004C41EE /* RequestTest.swift in Sources */,
+				80E7597F1C2572D6004C41EE /* CacheTest.swift in Sources */,
+				80E759801C2572D6004C41EE /* NoopCacheTest.swift in Sources */,
+				80E759861C2572D6004C41EE /* RegexTest.swift in Sources */,
+				80E7598D1C2572D6004C41EE /* ActorTest.swift in Sources */,
+				80E759821C2572D6004C41EE /* SessionCacheTest.swift in Sources */,
+				80E759811C2572D6004C41EE /* MemoryCacheTest.swift in Sources */,
+				80E7598B1C2572D6004C41EE /* PasswordTest.swift in Sources */,
+				80E759881C2572D6004C41EE /* RequestBaseTest.swift in Sources */,
+				80E7597E1C2572D6004C41EE /* Helpers.swift in Sources */,
+				80E759831C2572D6004C41EE /* FileCacheTest.swift in Sources */,
+				80E759871C2572D6004C41EE /* UrlEncodingTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80520C8C1BA4418F00975520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80520C7F1BA4418F00975520 /* StreamOneSDK-OSX */;
+			targetProxy = 80520C8B1BA4418F00975520 /* PBXContainerItemProxy */;
+		};
+		80924B701B5A5B7D003BADFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80924B621B5A5B7D003BADFA /* StreamOneSDK-iOS */;
+			targetProxy = 80924B6F1B5A5B7D003BADFA /* PBXContainerItemProxy */;
+		};
+		80ADB1171C12F4B700F0924A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80ADB10A1C12F4B700F0924A /* StreamOneSDK-tvOS */;
+			targetProxy = 80ADB1161C12F4B700F0924A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		80520C911BA4418F00975520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = StreamOneSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.SDK;
+				PRODUCT_NAME = StreamOneSDK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		80520C921BA4418F00975520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = StreamOneSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.SDK;
+				PRODUCT_NAME = StreamOneSDK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		80520C931BA4418F00975520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = StreamOneSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.StreamOne.StreamOneSDK-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		80520C941BA4418F00975520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = StreamOneSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.StreamOne.StreamOneSDK-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		80520CA21BA4419800975520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = StreamOneSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.SDK;
+				PRODUCT_NAME = StreamOneSDK;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		80520CA31BA4419800975520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = StreamOneSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.SDK;
+				PRODUCT_NAME = StreamOneSDK;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		80924B751B5A5B7D003BADFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		80924B761B5A5B7D003BADFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80924B781B5A5B7D003BADFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = "${CURRENT_PROJECT_VERSION}";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = StreamOneSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.SDK;
+				PRODUCT_NAME = StreamOneSDK;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80924B791B5A5B7D003BADFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = "${CURRENT_PROJECT_VERSION}";
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = StreamOneSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.SDK;
+				PRODUCT_NAME = StreamOneSDK;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		80924B7B1B5A5B7D003BADFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = StreamOneSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.StreamOneSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80924B7C1B5A5B7D003BADFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = StreamOneSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.StreamOneSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		80ADB11C1C12F4B700F0924A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = StreamOneSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.SDK;
+				PRODUCT_NAME = StreamOneSDK;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		80ADB11D1C12F4B700F0924A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = StreamOneSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.StreamOne.SDK;
+				PRODUCT_NAME = StreamOneSDK;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		80ADB11E1C12F4B700F0924A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = StreamOneSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.StreamOne.StreamOneSDK-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		80ADB11F1C12F4B700F0924A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = StreamOneSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.StreamOne.StreamOneSDK-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80520C951BA4418F00975520 /* Build configuration list for PBXNativeTarget "StreamOneSDK-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80520C911BA4418F00975520 /* Debug */,
+				80520C921BA4418F00975520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80520C961BA4418F00975520 /* Build configuration list for PBXNativeTarget "StreamOneSDK-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80520C931BA4418F00975520 /* Debug */,
+				80520C941BA4418F00975520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80520CA11BA4419800975520 /* Build configuration list for PBXNativeTarget "StreamOneSDK-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80520CA21BA4419800975520 /* Debug */,
+				80520CA31BA4419800975520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80924B5D1B5A5B7D003BADFA /* Build configuration list for PBXProject "StreamOneSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80924B751B5A5B7D003BADFA /* Debug */,
+				80924B761B5A5B7D003BADFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80924B771B5A5B7D003BADFA /* Build configuration list for PBXNativeTarget "StreamOneSDK-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80924B781B5A5B7D003BADFA /* Debug */,
+				80924B791B5A5B7D003BADFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80924B7A1B5A5B7D003BADFA /* Build configuration list for PBXNativeTarget "StreamOneSDK-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80924B7B1B5A5B7D003BADFA /* Debug */,
+				80924B7C1B5A5B7D003BADFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80ADB1201C12F4B700F0924A /* Build configuration list for PBXNativeTarget "StreamOneSDK-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80ADB11C1C12F4B700F0924A /* Debug */,
+				80ADB11D1C12F4B700F0924A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80ADB1211C12F4B700F0924A /* Build configuration list for PBXNativeTarget "StreamOneSDK-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80ADB11E1C12F4B700F0924A /* Debug */,
+				80ADB11F1C12F4B700F0924A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80924B5A1B5A5B7D003BADFA /* Project object */;
+}
